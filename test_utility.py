@@ -2,7 +2,7 @@ import pytest
 import pandas as pd
 import numpy as np
 from prediction_demo import data_preparation,data_split,train_model,eval_model
-
+#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
 @pytest.fixture
 def housing_data_sample():
     return pd.DataFrame(
@@ -38,4 +38,4 @@ def feature_target_sample(housing_data_sample):
 def test_data_split(feature_target_sample):
     return_tuple = data_split(*feature_target_sample)
     # TODO test if the length of return_tuple is 4
-    raise NotImplemented
+    assert len(return_tuple) == 4
